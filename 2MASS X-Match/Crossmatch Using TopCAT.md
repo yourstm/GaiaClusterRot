@@ -22,11 +22,11 @@
 
    IV. Go!
 
-   !["Select Catalog"]("Select Catalog".png)
+   !["Select Catalog"](Select Catalog.png)
 
 4. Double click on the new table and it has all the data you just crossmatched. 
 
-   !["Full Table"]("Full Table".png)
+   !["Full Table"](Full Table.png)
 
 
 
