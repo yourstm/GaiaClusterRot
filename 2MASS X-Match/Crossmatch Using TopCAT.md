@@ -6,11 +6,11 @@
 
      <!--Example file will be for the Hyades Cluster-->
 
-!["Open"](/Users/mitchy/Desktop/Astro 316 Covey/Crossmatch Using TopCAT/"Open".png)
+!["Open"]("Open".png)
 
 2. Now that the file we opened is in our "Tables List", we can crossmatch it. Select the table we opened, and in the menu bar of TopCAT go to Joins > CDS Upload X-Match.
 
-   !["Crossmatch"](/Users/mitchy/Desktop/Astro 316 Covey/Crossmatch Using TopCAT/"Crossmatch".png)
+   !["Crossmatch"]("Crossmatch".png)
 
 3. This window is for selecting which catalog and parameters you'd like to crossmatch against. 
 
@@ -22,11 +22,11 @@
 
    IV. Go!
 
-   !["Select Catalog"](/Users/mitchy/Desktop/Astro 316 Covey/Crossmatch Using TopCAT/"Select Catalog".png)
+   !["Select Catalog"]("Select Catalog".png)
 
 4. Double click on the new table and it has all the data you just crossmatched. 
 
-   !["Full Table"](/Users/mitchy/Desktop/Astro 316 Covey/Crossmatch Using TopCAT/"Full Table".png)
+   !["Full Table"]("Full Table".png)
 
 
 
