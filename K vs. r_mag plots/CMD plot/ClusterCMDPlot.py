@@ -1,17 +1,31 @@
 import pandas as panda
-import matplotlib.pyplot as 
-#find a way to make if statements for each cluster, iteraing over .csv "Cluster Names" to calculate Absolute magnitude 
-# using parallax through pandas
-# MAKE NEW EMPTY ARRAYS FOR EACH ABS MAG 
+import matplotlib.pyplot as plt
 
-Hyades = panda.read_csv("Hyadesx2xPxG.csv")
+# Loading each CSV into a dataframe to read from
+Hyades = panda.read_csv("/Users/mitchy/Desktop/School/Astro 316 Covey/GaiaClusterRot/K vs. r_mag plots/Hyades/Hyadesx2xPxG.csv")
+Praesepe = panda.read_csv("/Users/mitchy/Desktop/School/Astro 316 Covey/GaiaClusterRot/K vs. r_mag plots/Praesepe/Praesepex2xPxG.csv")
+Pleiades = panda.read_csv("/Users/mitchy/Desktop/School/Astro 316 Covey/GaiaClusterRot/K vs. r_mag plots/Pleiades/Pleiadesx2xPxG.csv")
+NGC2682 = panda.read_csv("/Users/mitchy/Desktop/School/Astro 316 Covey/GaiaClusterRot/K vs. r_mag plots/NGC2682/NGC2682x2xPxG.csv")
+NGC752 = panda.read_csv("/Users/mitchy/Desktop/School/Astro 316 Covey/GaiaClusterRot/K vs. r_mag plots/NGC752/NGC752x2xPxG.csv")
+NGC188 = panda.read_csv("/Users/mitchy/Desktop/School/Astro 316 Covey/GaiaClusterRot/K vs. r_mag plots/NGC188/NGC188x2xPxG.csv")
 
+# Dropping rows that depend on rmag whose rmag values dont exist
+Pleiades = Pleiades.dropna(axis=0, subset=['rmag'])
+Hyades = Hyades.dropna(axis=0, subset=['rmag'])
+Praesepe = Praesepe.dropna(axis=0, subset=['rmag'])
+NGC2682 = NGC2682.dropna(axis=0, subset=['rmag'])
+NGC752 = NGC752.dropna(axis=0, subset=['rmag'])
+NGC188 = NGC188.dropna(axis=0, subset=['rmag'])
 
-plt.plot(Hyades[["rmag"]], Hyades[["Kmag"]], marker = "v", markersize = 1, color = "red", linestyle = "none")
+# Plotting
+plt.plot(NGC188[["r-K"]], NGC188[["AbsKmag"]], marker = "v", markersize = 0.5, color = "blue", linestyle = "none")
+plt.plot(NGC752[["r-K"]], NGC752[["AbsKmag"]], marker = "v", markersize = 0.5, color = "green", linestyle = "none")
+plt.plot(NGC2682[["r-K"]], NGC2682[["AbsKmag"]], marker = "v", markersize = 0.5, color = "purple", linestyle = "none")
+plt.plot(Praesepe[["r-K"]], Praesepe[["AbsKmag"]], marker = "v", markersize = 0.5, color = "orange", linestyle = "none")
+plt.plot(Pleiades[["r-K"]], Pleiades[["AbsKmag"]], marker = "v", markersize = 0.5, color = "black", linestyle = "none")
 
-plt.ylabel("Kmag")
+plt.ylabel("Absolute Kmag")
 plt.xlabel("r-K")
 
-plt.ylim(22.5, 5)
+plt.ylim(20, 0)
 plt.show()
-
