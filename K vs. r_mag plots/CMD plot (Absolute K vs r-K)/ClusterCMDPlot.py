@@ -18,6 +18,7 @@ NGC752 = NGC752.dropna(axis=0, subset=['rmag'])
 NGC188 = NGC188.dropna(axis=0, subset=['rmag'])
 
 # Plotting
+plt.plot(Hyades[["r-K"]], Hyades[["AbsKmag"]], marker = "v", markersize = 0.5, color = "red", linestyle = "none")
 plt.plot(NGC188[["r-K"]], NGC188[["AbsKmag"]], marker = "v", markersize = 0.5, color = "blue", linestyle = "none")
 plt.plot(NGC752[["r-K"]], NGC752[["AbsKmag"]], marker = "v", markersize = 0.5, color = "green", linestyle = "none")
 plt.plot(NGC2682[["r-K"]], NGC2682[["AbsKmag"]], marker = "v", markersize = 0.5, color = "purple", linestyle = "none")
