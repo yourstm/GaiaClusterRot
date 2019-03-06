@@ -10,14 +10,6 @@ NGC752 = panda.read_csv("../NGC752/NGC752x2xPxG.csv")
 NGC188 = panda.read_csv("../NGC188/NGC188x2xPxG.csv")
 
 
-#Removing points with error in phot_g_mean_flux_over_error > 50, phot_rp_mean_flux_over_error>20, phot_bp_mean_flux_over_error>20
-Hyades = Hyades[(Hyades.phot_g_mean_flux_over_error >= 50) & (Hyades.phot_rp_mean_flux_over_error >= 20) & (Hyades.phot_bp_mean_flux_over_error >= 20)]
-NGC188 = NGC188[(NGC188.phot_g_mean_flux_over_error >= 50) & (NGC188.phot_rp_mean_flux_over_error >= 20) & (NGC188.phot_bp_mean_flux_over_error >= 20)]
-NGC752 = NGC752[(NGC752.phot_g_mean_flux_over_error >= 50) & (NGC752.phot_rp_mean_flux_over_error >= 20) & (NGC752.phot_bp_mean_flux_over_error >= 20)]
-NGC2682 = NGC2682[(NGC2682.phot_g_mean_flux_over_error >= 50) & (NGC2682.phot_rp_mean_flux_over_error >= 20) & (NGC2682.phot_bp_mean_flux_over_error>= 20)]
-Pleiades = Pleiades[(Pleiades.phot_g_mean_flux_over_error >= 50) & (Pleiades.phot_rp_mean_flux_over_error >= 20) & (Pleiades.phot_bp_mean_flux_over_error >= 20)]
-Praesepe = Praesepe[(Praesepe.phot_g_mean_flux_over_error >= 50) & (Praesepe.phot_rp_mean_flux_over_error >= 20) & (Praesepe.phot_bp_mean_flux_over_error >= 20)]
-
 
 # Plotting
 plt.plot(Hyades[["bp_rp"]], Hyades[["AbsGmag"]], marker = "v", markersize = 0.5, color = "red", linestyle = "none", label = "Hyades")
