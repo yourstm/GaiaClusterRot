@@ -1,5 +1,7 @@
 import pandas as panda
 import matplotlib.pyplot as plt
+import matplotlib as mp
+from IPython.display import set_matplotlib_formats
 
 # Loading each CSV into a dataframe to read from
 Hyades = panda.read_csv("../Hyades/Hyadesx2xPxG.csv")
@@ -17,6 +19,22 @@ NGC752 = NGC752[(NGC752.phot_g_mean_flux_over_error >= 50) & (NGC752.phot_rp_mea
 NGC2682 = NGC2682[(NGC2682.phot_g_mean_flux_over_error >= 50) & (NGC2682.phot_rp_mean_flux_over_error >= 20) & (NGC2682.phot_bp_mean_flux_over_error>= 20)]
 Pleiades = Pleiades[(Pleiades.phot_g_mean_flux_over_error >= 50) & (Pleiades.phot_rp_mean_flux_over_error >= 20) & (Pleiades.phot_bp_mean_flux_over_error >= 20)]
 Praesepe = Praesepe[(Praesepe.phot_g_mean_flux_over_error >= 50) & (Praesepe.phot_rp_mean_flux_over_error >= 20) & (Praesepe.phot_bp_mean_flux_over_error >= 20)]
+
+# Using Davenports image quality code:
+set_matplotlib_formats('pdf', 'png')
+plt.rcParams['savefig.dpi'] = 200
+
+plt.rcParams['figure.autolayout'] = False
+plt.rcParams['figure.figsize'] = 6,6
+plt.rcParams['axes.labelsize'] = 18
+plt.rcParams['axes.titlesize'] = 20
+plt.rcParams['font.size'] = 16
+plt.rcParams['lines.linewidth'] = 2.0
+plt.rcParams['lines.markersize'] = 8
+plt.rcParams['legend.fontsize'] = 14
+
+mp.rcParams['xtick.direction'] = 'out'
+mp.rcParams['ytick.direction'] = 'out'
 
 
 # Plotting
