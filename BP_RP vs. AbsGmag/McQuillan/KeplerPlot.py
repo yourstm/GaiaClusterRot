@@ -1,3 +1,4 @@
+
 import pandas
 import math
 import matplotlib.pyplot as plt
@@ -28,17 +29,15 @@ def main():
     # Setting up colorbar after colormap has been defined
     cb = plt.colorbar()
     cb.set_label("$P_{rot}$ (days)")
-
+    
     # Defining the inset plot
     ax2 = fig.add_axes([0.47, 0.5, 0.25, 0.35])
     ax2.tick_params(labelsize = 10)
     ax2.scatter(Kepler["bp_rp"], Kepler["phot_g_mean_mag"] - KeplerDistMod, marker = "v", s = 7, c = Kepler["Prot"], cmap = cm)
-
     ax2.set_xlim(1.3,1.6)
     ax2.set_ylim(7.5, 6)
     ax2.set_yticks([7.5, 7, 6.5, 6])
-
-
+    
     # Using Davenports image settings
     set_matplotlib_formats('pdf', 'png')
     plt.rcParams['savefig.dpi'] = 200
@@ -60,3 +59,5 @@ def distMod(parallax):
 
 
 main()
+
+
